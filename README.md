@@ -12,8 +12,7 @@ Bir uygulamanın kullanıcı arayüzünü görünüm nesneleri (view objects) ol
 
 Her uygulama, içindeki tüm nesneleri kapsayan tek bir UIWindow örneğine sahiptir. UIWindow, UIView'in bir alt sınıfıdır. O nedenle pencereninin kendisi de bir görünümdür. Uygulama başlatıldığında pencere oluşturulur. Daha sonra yeni görünümler eklenebilir. Pencere yeni bir görünüm eklendiğinde artık eklenen görünüm pencerenin alt görünümü olur. Bu sayede hiyerarşi oluşur.
 
-<img src="AutoLayout/images/hierarchy.png" style="align:center;" />
-<p style="text-align: center; font-size: 10px;">Kaynak: Bu görsel "iOS Programming: The Big Nerd Ranch Guide, 7th Edition" isimli kaynaktan alınmıştır.</p>
+![](AutoLayout/images/hierarchy.png)
 
 ## Görünümler ve Çerçeveler
 Bir görünümü interface builder yerine kodla başlattığımızda **init(frame:)** olarak belirlenen başlatıcısını kullanmamız gerekir. Bu yöntem UIView sınıfının bir özelliği olan görünümün çerçevesi olacak **CGRect** argümanı alır.
@@ -46,9 +45,7 @@ class ViewController: UIViewController {
 
 Yukarıdaki kod ile IB (Interface Builder) yerine kod ile iki farklı çerçeve oluşturduk. Bu çerçevelerin içine birer adet dikdörtgen oluşturduk. **CGRect** fonksiyonuna oluşturacağımız dikdörtgenin pencerede hangi konumda olacağını ve boyutlarını belirttik. Daha sonra UIView sınıfından bir görünüm oluşturup çerçeveyi kullanması için **(frame:)** argümanına belirttik. En son aşamada ana görünüme (ViewController) alt görünüm olarak ekledik. Son durumda görünüm hiyerarşisi aşağıdaki gibi olur.
 
-<img src="AutoLayout/images/updated-hierarchy.png" style="zoom:70%; align:center;" />
-
-<p style="text-align: center; font-size: 10px;">Kaynak: Bu görsel "iOS Programming: The Big Nerd Ranch Guide, 7th Edition" isimli kaynaktan alınmıştır.</p>
+![](AutoLayout/images/hierarchy1.png)
 
 Simülatör görüntüsü ise aşağıdaki gibi olur.
 
@@ -60,9 +57,7 @@ Kodda küçük bir güncelleme yaparak *secondView* görünümünü ama görün�
 firstView.addSubview(secondView)
 ```
 
-<img src="AutoLayout/images/new-hierarchy.png" style="zoom:70%; align:center;" />
-
-<p style="text-align: center; font-size: 10px;">Kaynak: Bu görsel "iOS Programming: The Big Nerd Ranch Guide, 7th Edition" isimli kaynaktan alınmıştır.</p>
+![](AutoLayout/images/hierarchy2.png)
 
 Simülatör görüntüsü ise aşağıdaki gibi olur.
 
